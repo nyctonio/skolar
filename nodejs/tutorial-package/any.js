@@ -1,4 +1,9 @@
 const anything = require("randomstring");
+const joke = require('give-me-a-joke');
+
+joke.getRandomDadJoke(function (joke) {
+    console.log(joke);
+});
 
 console.log(anything.generate());
 
