@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    this is fake google
+    <div>
+        <h1 class="container" id="hello">Google</h1>
+        <input type="text" name="" id="google">
+        <button onclick="clickmeFunction()">Search</button>
+        <h5 id="demo"></h5>
+
+        <p id="demo"></p>
+        <button onclick="showcart()">Show items in your cart</button>
+        <div id="cart_div">
+
+        </div>
+
+        <img id="hideme" height="150" width="150"
+            src="https://plus.unsplash.com/premium_photo-1669831178095-005ed789250a?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1587&q=80"
+            alt="">
+
+        <button onclick="hidemefunction()">Hide Image</button>
+
+    </div>
+
+    <script>
+        function clickmeFunction() {
+            let a = document.getElementById("google").value;
+            document.getElementById("demo").innerHTML = a;
+        }
+
+        let cart = ["apple", "mango", "banana", "orange"];
+        function showcart() {
+            cart.forEach((item) => {
+                console.log(item);
+                let newEle = document.createElement("li");
+                newEle.innerHTML = item;
+                document.getElementById("cart_div").appendChild(newEle);
+            })
+        }
+
+        function hidemefunction() {
+            document.getElementById("hideme").style.display = "none";
+        }
+
+
+        // console.log("hello world");
+        // let a = 10;
+        // console.log(a);
+    </script>
+
+</body>
+
+</html>
