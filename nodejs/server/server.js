@@ -1,6 +1,8 @@
 const express = require('express')
 const app = express()
 
+// a basic user management application
+
 let users = [
     "usha", "mukesh", "sujith", "ankit", "shreya", "pooja"
 ]
@@ -11,12 +13,15 @@ app.get('/', function (req, res) {
     })
 })
 
+
+// fetching the users
 app.get('/getuser', (req, res) => {
     res.json({
         users
     })
 })
 
+// fetching the user by username
 app.get('/:username', (req, res) => {
     let username = req.params.username
     if (users.includes(username)) {
@@ -32,7 +37,7 @@ app.get('/:username', (req, res) => {
 });
 
 
-
+// addign the users to our list
 app.post('/adduser/:name', (req, res) => {
     let name = req.params.name
     users.push(name)
@@ -41,6 +46,7 @@ app.post('/adduser/:name', (req, res) => {
     })
 })
 
+// deleting the user from our list
 app.delete('/deleteuser/:name', (req, res) => {
     let name = req.params.name
     users = users.filter((user) => {
@@ -51,8 +57,22 @@ app.delete('/deleteuser/:name', (req, res) => {
     })
 });
 
-
-
+// update the
+app.patch('/updateuser/:name/:updatedname', (req, res) => {
+    let name = req.params.name
+    let updatedname = req.params.updatedname
+    users = users.map((user) => {
+        if (user === name) {
+            return updatedname
+        }
+        else {
+            return user
+        }
+    })
+    res.json({
+        message: `${name} updated successfully`
+    })
+});
 //  /         - google.com
 //  /about    - google.com/about
 
@@ -65,6 +85,6 @@ app.delete('/deleteuser/:name', (req, res) => {
 // DELETE - delete the data from server
 
 
-app.listen(3004, () => {
-    console.log('Server is running on port 3004')
+app.listen(3000, () => {
+    console.log('Server is running on port 3000')
 })
