@@ -23,7 +23,7 @@ const userSchema = new mongoose.Schema({
 const User = mongoose.model('user', userSchema);
 
 app.get('/', (req, res) => {
-    res.send('Hello Everyone from Express Server');
+    res.sendFile(__dirname + '/index.html');
 })
 
 // CRUD Operations

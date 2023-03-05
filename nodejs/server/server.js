@@ -8,9 +8,7 @@ let users = [
 ]
 
 app.get('/', function (req, res) {
-    res.json({
-        message: 'This is an user application'
-    })
+    res.sendFile(__dirname + '/index.html')
 })
 
 
