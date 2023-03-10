@@ -1,0 +1,46 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- tailwind css -->
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-[#28282B]">
+    <div class="flex flex-col justify-center items-center h-screen w-screen">
+        <div class="text-4xl text-white mb-10">Upload Your Files Here</div>
+        <div>
+            <input type="file" name="" id="">
+        </div>
+
+        <button
+            class="bg-[#1E1E1E] px-4 py-2 border-[1px] border-black hover:bg-black rounded-md text-white text-xl mt-10">
+            Upload
+        </button>
+
+    </div>
+    <style>
+        input[type="file"] {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            width: 450px;
+            background-color: #1E1E1E;
+            color: white;
+            border: none;
+            border-radius: 10px;
+            font-size: 1.5rem;
+            font-weight: 600;
+            outline: none;
+        }
+
+        input[type="file"]::-webkit-file-upload-button {
+            display: none;
+        }
+    </style>
+</body>
+
+</html>
