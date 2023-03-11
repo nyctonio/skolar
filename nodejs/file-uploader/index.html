@@ -11,14 +11,16 @@
 <body class="bg-[#28282B]">
     <div class="flex flex-col justify-center items-center h-screen w-screen">
         <div class="text-4xl text-white mb-10">Upload Your Files Here</div>
-        <div>
-            <input type="file" name="" id="">
-        </div>
+        <form action="/upload" enctype="multipart/form-data" method="POST">
+            <div>
+                <input type="file" name="file">
+            </div>
 
-        <button
-            class="bg-[#1E1E1E] px-4 py-2 border-[1px] border-black hover:bg-black rounded-md text-white text-xl mt-10">
-            Upload
-        </button>
+            <button type="submit"
+                class="bg-[#1E1E1E] px-4 py-2 border-[1px] border-black hover:bg-black rounded-md text-white text-xl mt-10">
+                Upload
+            </button>
+        </form>
 
     </div>
     <style>
