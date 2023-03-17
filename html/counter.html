@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Counter</title>
+</head>
+
+<!-- span - inline tag 1 -> span because i need to increase and decrease the value -->
+<!-- DOM manipulation -->
+<!-- tag  -->
+
+<body>
+    <div>
+        <h1>Counter 1 : <span id="counter">1</span></h1>
+        <button onclick="increase()">Increase</button>
+        <button onclick="decrease()">Decrease</button>
+    </div>
+
+    <div>
+        <h1>Counter 2 : <span id="counter1">1</span></h1>
+        <button onclick="increase1()">Increase</button>
+        <button onclick="decrease1()">Decrease</button>
+    </div>
+
+</body>
+
+<script>
+    let counter = 1;
+    const increase = () => {
+        counter++;
+        document.getElementById('counter').innerHTML = counter;
+    }
+    const decrease = () => {
+        counter--;
+        document.getElementById('counter').innerHTML = counter;
+    }
+
+    let counter1 = 1;
+    const increase1 = () => {
+        counter1++;
+        document.getElementById('counter1').innerHTML = counter1;
+    }
+    const decrease1 = () => {
+        counter1--;
+        document.getElementById('counter1').innerHTML = counter1;
+    }
+
+
+</script>
+
+</html>
