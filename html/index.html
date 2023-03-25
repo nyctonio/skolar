@@ -4,24 +4,41 @@
 <head>
     <title>New File</title>
     <link rel="stylesheet" href="./styles.css">
+    <script src="https://cdn.tailwindcss.com"></script>
 </head>
 
-<!-- tag < class < id < inline-style -->
-
 <body>
-    <!-- <p style="font-size: 300px;" class="heading" id="heading-1">New Heading</p>
-    <p class="heading">New Heading</p>
-    <h2 class="heading" id="heading-2">New heading h2</h2>
-    <h2>heyyyy</h2> -->
 
-    <!-- padding and margin -->
-
-    <div style="padding: 5px; border:1px solid black" id="parent">
-        <div class="heading" style="margin-bottom:10px; border:1px solid red">div1</div>
-        <div class="heading" style="border:1px solid blue">div2</div>
+    <div class="bg-black text-white w-screen h-screen">
+        <div class="flex h-[10%] justify-between px-10 py-4 items-center">
+            <div class="text-5xl font-bold">
+                <span class="text-[#fb1f59]">K</span>evin.
+            </div>
+            <div class="flex text-xl space-x-[50px]">
+                <div>Home</div>
+                <div>About</div>
+                <div>Services</div>
+                <div>Portfolio</div>
+                <div>Other</div>
+            </div>
+        </div>
+        <div class="flex h-[90%] w-full">
+            <div class="flex flex-col w-1/2 h-full items-center text-left justify-center">
+                <div class="space-y-4">
+                    <div class="text-4xl">UI/UX Designer</div>
+                    <div class="text-6xl font-bold">Hi, I am Kevin</div>
+                    <div class="text-6xl font-bold">Jen From Australia</div>
+                </div>
+            </div>
+            <div class="w-1/2 h-full"
+                style="
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: cover;
+                background-image: url('https://img.freepik.com/free-photo/bohemian-man-thinking_1368-3693.jpg?w=2000&t=st=1679752931~exp=1679753531~hmac=f55fddbc702c5504e1ae7c053898d22402b35d9a817faebe2c9febcdfc615251');">
+            </div>
+        </div>
     </div>
-
-
 
 </body>
 
