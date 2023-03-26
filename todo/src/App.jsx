@@ -61,6 +61,10 @@ function App() {
                 <p>{todo.value}</p>
                 <button onClick={()=>{
                   const editValue = prompt('Enter edit value');
+                  if(editValue == ''){
+                    alert('Please enter todo');
+                    return;
+                  }
                   const newTodo = todos.map((item) => {
                     if(item.id === todo.id){
                       item.value = editValue;
