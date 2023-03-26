@@ -1,0 +1,6 @@
+{
+	"dependencies": {
+		"randomstring": "^1.2.3",
+		"uuid": "^9.0.0"
+	}
+}
