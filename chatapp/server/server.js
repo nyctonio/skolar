@@ -11,7 +11,6 @@ const io = new Server(server, {
 });
 
 // 5173  application
-
 // 3000  application (add configuration to allow port 5173)
 
 const dotenv = require("dotenv");
@@ -26,7 +25,12 @@ let client_count = 1;
 // on -> listening      emit -> speaking 
 io.on('connection', (socket) => {
     console.log(`a user connected ${client_count++}`);
-    socket.emit('message', 'Welcome to chat app from skolar');
+    socket.on('message', (data) => {
+        console.log(data);
+        console.log(socket.id);
+        // send message to all users except sender
+        socket.broadcast.emit('message', data);
+    })
     socket.on('listen-server', (data) => {
         console.log(data);
     })
